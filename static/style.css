@@ -1,0 +1,32 @@
+#main-container{
+    margin: auto;
+    margin-top: 40px;
+    width: 50%;
+    border: 3px solid darkgreen;
+    padding: 10px;
+}
+form{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+table{
+    border-collapse: collapse;
+    table-layout:fixed;
+    width:100%;
+}
+tr{
+    margin-bottom: auto;
+}
+.submit{
+    margin-left: auto;
+}
+
+hr{
+    padding: 10px;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+}

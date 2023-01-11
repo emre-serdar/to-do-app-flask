@@ -5,24 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do App</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <div>
+    <div id="main-container">
         <h1>To Do List</h1>
+        <hr>
         <form action="/add" method="post">
-            <div>
-                <label for="">Enter the task</label>
-                <input type="text" name="name">
-                <button type="submit">Add Task</button>
-            </div>
+            
+            <label for="">Enter The Task</label>
+            <input type="text" name="name">
+           
+            <label for="">Enter Due Date</label>
+            <input type="text" name="duedate" placeholder="MM/DD/YYYY">
+                
+            <button class="submit" type="submit">Add Task</button>
         </form>
         <table>
+            <thead>
+                <tr>
+                    <th class="task-id">#TaskID</th>
+                    <th class="task-due">Due Date</th>
+                    <th class="task">Task Name</th>
+                    <th class="update">Remove</th>
+                </tr>
+                </thead>
             <tbody>
                 {%for todo in todo_list%}
                 <tr>
                     <td>{{todo.task_id}}</td>
+                    <td>{{todo.due}}</td>
                     <td>{{todo.name}}</td>
-                    <td><a href="/delete/{{todo.task_id}}">Delete</a></td>
+                    <td><a class="btn btn-default" href="/delete/{{todo.task_id}}" role="button" style="background-color: red; height: fit-content;">Delete</a></td>
+                    
                 </tr>
                 {%endfor%}
             </tbody>
