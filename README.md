@@ -13,8 +13,7 @@ $ cd to-do-app-flask
 Then install the dependencies:
 
 ```sh
-$ pip install flask
-$ pip install Flask-SqlAlchemy
+$ pip install -r requirements.txt
 ```
 Once `pip` has finished downloading the dependencies. Go to Flask shell to create a table in the database:
 ```sh
